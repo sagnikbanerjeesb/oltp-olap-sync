@@ -4,7 +4,7 @@
 
 # Iteration 1 - Solution 1
 
-![Diagram](images/oltp_olap_iter1_sol1.png)
+![Diagram](../images/oltp_olap_iter1_sol1.png)
 
 - The Debezium Kafka connector with generate CDC events and push them into kafka
 - The kafka consumer will:
