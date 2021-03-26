@@ -50,10 +50,11 @@ INNER JOIN contact
 #### Goals
 
 1. The solution should be able to populate the OLAP DB from the existing data in OLTP DB. (Initial load)
-1. Whenever there is a change in the OLTP tables (CRUD), it should reflect in the OLAP table in real time.
+1. Whenever there is a change in the OLTP tables, it should reflect in the OLAP table in real time.
+    1. As part of iteration 1, we'll focus only on creation of rows. Update and delete are OUT OF SCOPE
 
 #### Solution:
 
-TBD
+[Solution 1](docs/iteration1-sol1.md)
 
 ---
