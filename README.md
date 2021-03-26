@@ -27,7 +27,7 @@ TABLE: contact
 
 #### The target OLAP database should then look like this:
 
-TABLE: student_contacts
+TABLE: student_contact
 
 | student_id | contact_id | name | contact_number |
 | --- | --- | --- | --- |

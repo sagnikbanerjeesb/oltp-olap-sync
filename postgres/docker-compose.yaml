@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  oltp-olap-sync_oltp-db:
+    image: debezium-pg
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: pg
+      POSTGRES_PASSWORD: pg
+    volumes:
+      - oltp-olap-sync_oltp-data:/var/lib/postgresql/data
+      - ./init-oltp.sql:/docker-entrypoint-initdb.d/init-oltp.sql
+  oltp-olap-sync_olap-db:
+    image: debezium-pg
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: pg
+      POSTGRES_PASSWORD: pg
+    volumes:
+      - oltp-olap-sync_olap-data:/var/lib/postgresql/data
+      - ./init-olap.sql:/docker-entrypoint-initdb.d/init-olap.sql
+volumes:
+  oltp-olap-sync_oltp-data:
+  oltp-olap-sync_olap-data:

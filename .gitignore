@@ -1,2 +1,6 @@
 .idea/
 kafka/
+cdc-processor-kafka/
+docker-images/
+debezium/
+bin/*pid.txt

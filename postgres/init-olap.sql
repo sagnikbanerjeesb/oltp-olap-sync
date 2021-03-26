@@ -1,0 +1,1 @@
+create table student_contact (student_id bigint, contact_id bigint, name text, contact_number text, primary key (student_id, contact_id));
