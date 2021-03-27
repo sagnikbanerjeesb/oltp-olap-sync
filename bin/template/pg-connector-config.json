@@ -7,7 +7,7 @@
     "database.user": "pg", 
     "database.password": "pg", 
     "database.dbname" : "pg", 
-    "database.server.name": "pg", 
+    "database.server.name": "oltp-olap-sync",
     "table.include.list": "public.student,public.contact"
   }
 }
