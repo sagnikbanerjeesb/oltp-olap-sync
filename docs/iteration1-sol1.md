@@ -7,7 +7,7 @@
 ![Diagram](../images/oltp_olap_iter1_sol1.png)
 
 - The Debezium Kafka connector with generate CDC events and push them into kafka
-- The kafka consumer will:
+- The [kafka consumer](https://github.com/sagnikbanerjeesb/oltp-olap-sync_cdc-processor-kafka) will:
     - Analyse the event and detect whether its an insert
     - If its an insert, try to form the full row and insert into OLAP DB
     
@@ -26,7 +26,7 @@ SELECT
   student.student_id as student_id,
   contact.contact_id as contact_id,
   student.name as name,
-  contact.contact_number as contact_number,
+  contact.contact_number as contact_number
 FROM student
 INNER JOIN contact
   ON student.student_id = contact.student_id
@@ -51,7 +51,7 @@ SELECT
   student.student_id as student_id,
   contact.contact_id as contact_id,
   student.name as name,
-  contact.contact_number as contact_number,
+  contact.contact_number as contact_number
 FROM student
 INNER JOIN contact
   ON student.student_id = contact.student_id

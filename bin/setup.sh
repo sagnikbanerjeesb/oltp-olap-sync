@@ -57,4 +57,10 @@ cd ../..
 echo "Setting up kafka connect properties file to load debezium connector plugin which will be used during startup"
 sed "s|###DEBEZIUM_CONNECTS_DIR###|$PWD/debezium/connects|g" ./bin/template/pg-connect.properties.template > ./kafka/config/pg-connect.properties
 
+echo "Checking out kafka consumer code that will process cdc events..."
+git clone https://github.com/sagnikbanerjeesb/oltp-olap-sync_cdc-processor-kafka.git
+cd oltp-olap-sync_cdc-processor-kafka
+chmod +x ./startup.sh
+cd ..
+
 echo "Setup complete"

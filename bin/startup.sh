@@ -16,6 +16,8 @@ cd ..
 
 rm logs/zookeeper.out
 rm logs/kafka.out
+rm logs/kafka-connect.out
+rm logs/kafka-consumer.out
 
 echo "Starting up zookeeper. Check logs in logs/zookeeper.out"
 nohup kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties > logs/zookeeper.out 2>&1 &
@@ -37,3 +39,12 @@ sleep 10s
 
 echo "Starting up debezium kafka connect to track student and contact tables in OLTP DB..."
 curl -X POST localhost:8083/connectors -H "Content-Type: application/json" -d @bin/template/pg-connector-config.json
+
+echo ""
+echo "Starting up kafka consumer. Check logs in logs/kafka-consumer.out"
+cd oltp-olap-sync_cdc-processor-kafka
+nohup ./startup.sh > ../logs/kafka-consumer.out 2>&1 &
+echo $! > ../bin/kafka-consumer_pid.txt
+cd ..
+
+echo "done"

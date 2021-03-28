@@ -9,6 +9,10 @@ then
   exit 1
 fi
 
+echo "Killing kafka consumer..."
+kill $(cat bin/kafka-consumer_pid.txt)
+rm bin/kafka-consumer_pid.txt
+
 echo "De-registering debezium connector"
 curl -X DELETE localhost:8083/connectors/debezium-connector
 
