@@ -3,4 +3,5 @@ kafka/
 cdc-processor-kafka/
 docker-images/
 debezium/
+logs/
 bin/*pid.txt

@@ -1,2 +1,5 @@
-create table student (student_id bigserial primary key, name text);
-create table contact (contact_id bigserial primary key, student_id bigint, contact_number text);
+CREATE TABLE student (student_id BIGSERIAL PRIMARY KEY, name TEXT);
+CREATE TABLE contact (contact_id BIGSERIAL PRIMARY KEY, student_id BIGINT, contact_number TEXT);
+
+ALTER TABLE student REPLICA IDENTITY FULL;
+ALTER TABLE contact REPLICA IDENTITY FULL;
