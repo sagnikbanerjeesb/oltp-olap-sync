@@ -71,6 +71,18 @@ and contact
 1. However, the next CDC event will also get the full row and try to insert. We have to make sure that the insert is
 idempotent. Either it should fail, or update the record (preferably update)
 
+#### Idempotent insert
+
+Assuming that we have a unique index on (student_id, contact_id), below query will perform [upserts](https://www.postgresqltutorial.com/postgresql-upsert/).
+
+```sql
+INSERT INTO student_contact (student_id, contact_id, name, contact_number)  
+  VALUES (?, ?, ?, ?)  
+ON CONFLICT(student_id, contact_id)  
+DO  
+  UPDATE SET name = EXCLUDED.name, contact_number = EXCLUDED.contact_number;
+```
+
 ---
 
 #### OUT OF SCOPE:
