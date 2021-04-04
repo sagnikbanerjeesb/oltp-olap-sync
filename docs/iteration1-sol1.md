@@ -83,11 +83,3 @@ DO
   UPDATE SET name = EXCLUDED.name, contact_number = EXCLUDED.contact_number;
 ```
 
----
-
-#### OUT OF SCOPE:
-
-1. Robust failure handling
-1. Parallelism
-1. Handling primary key changes
-1. Handling update and delete operations
