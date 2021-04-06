@@ -8,6 +8,7 @@
 
 1. Updates to non key columns (PKs, join columns) in OLTB DB, in this case: name and contact_number should reflect in
 the OLAP DB
+1. Deletion of row
 
 ### OUT OF SCOPE
 

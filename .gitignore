@@ -1,6 +1,6 @@
 .idea/
 kafka/
-cdc-processor-kafka/
+oltp-olap-sync_cdc-processor-kafka/
 docker-images/
 debezium/
 logs/
