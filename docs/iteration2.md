@@ -1,3 +1,7 @@
+[Back to main README](../README.md)
+
+---
+
 # Iteration 2
 
 ### Assumptions
@@ -10,10 +14,13 @@
 the OLAP DB
 1. Deletion of row
 
+#### Solution:
+
+[Solution 1](./iteration2-sol1.md)
+
 ### OUT OF SCOPE
 
 1. Robust failure handling
 1. Parallelism
 1. Handling primary key changes
-1. Handling delete operations
 1. Handling updates to join columns

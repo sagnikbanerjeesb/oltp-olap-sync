@@ -31,6 +31,8 @@ Build a system to keep an OLAP database (denormalised) in sync with its source O
 
 ### [Iteration 2](docs/iteration2.md)
 
+### [Iteration 3](docs/iteration3.md)
+
 ### [Next steps](docs/next-steps.md)
 
 ---
